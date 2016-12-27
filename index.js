@@ -2,11 +2,13 @@ module.exports = function (ms, monthDay) {
     let mscast = null;
     if(typeof ms == 'string')
     {
-        mscast = Math.abs(Number(new Date(ms))) || 0;
+        mscast = Number(new Date(ms)) || 0;
     }
     else{
-        mscast = Math.abs(Number(ms)) || 0;
+        mscast = Number(ms) || 0;
     }
+    var neg = mscast < 0;
+    mscast = Math.abs(mscast);
     monthDay = monthDay || 31;
     var d, h, m, s, mt, yr,$ms;
     s = Math.floor(mscast / 1000);
@@ -22,7 +24,7 @@ module.exports = function (ms, monthDay) {
     yr = Math.floor(mt / 12);
     mt = mt % 12;
 
-    return {
+    var out =  {
         microSeconds:$ms,
         seconds:s,
         minutes:m,
@@ -31,6 +33,11 @@ module.exports = function (ms, monthDay) {
         months:mt,
         years:yr
     };
+
+    if(neg)
+        Object.keys(out).map(function(key) {
+            out[key] = out[key] > 0 ? - out[key] : out[key];
+        });
+
+    return out;
 };
-
-
