@@ -1,0 +1,11 @@
+{
+  "name": "date-destructuring",
+  "version": "1.0.0",
+  "description": "destructuring date or duration(ms) into microSeconds seconds minutes hours days months years",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Moussa Ndour <moussa_ndour@hotmail.fr>",
+  "license": "ISC"
+}
