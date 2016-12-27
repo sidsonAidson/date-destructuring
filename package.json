@@ -1,6 +1,6 @@
 {
   "name": "date-destructuring",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "destructuring date or duration(ms) into microSeconds seconds minutes hours days months years",
   "main": "index.js",
   "scripts": {
@@ -8,6 +8,12 @@
   },
   "author": "Moussa Ndour <moussa_ndour@hotmail.fr>",
   "license": "ISC",
+  "keywords": [
+    "subtract dates",
+    "date diff",
+    "date arthmetic",
+    "datediff"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/sidsonAidson/date-destructuring.git"
